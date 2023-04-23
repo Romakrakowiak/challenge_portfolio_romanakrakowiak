@@ -2,5 +2,5 @@
 
 # TASK 1
 ### SUBTASK 1
-6 Punktow :)
+_6 Punktow :)_
 ### SUBTASK 3
