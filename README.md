@@ -23,4 +23,4 @@
   * brak przycisku "anuluj" przy edytowaniu lub dodaniu gracza.
   * przy edytowniu klienta pojawiają sie nowe funkcje strony: raport meczowy oraz opcja dodania meczu.
  * Błędy:
-  * przy edytowaniu lub dodaniu gracza przycisk "clear" - nie działa.
+   * przy edytowaniu lub dodaniu gracza przycisk "clear" - nie działa.
