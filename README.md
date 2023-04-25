@@ -21,3 +21,6 @@
   * opcja "dodaj gracza" jest mało wyraźna
   * brak przycisku "edytuj" (dane gracza). Trzeba domyślić jak zedytować 
   * brak przycisku "anuluj" przy edytowaniu lub dodaniu gracza.
+  * przy edytowniu klienta pojawiają sie nowe funkcje strony: raport meczowy oraz opcja dodania meczu.
+ * Błędy:
+  * przy edytowaniu lub dodaniu gracza przycisk "clear" - nie działa.
