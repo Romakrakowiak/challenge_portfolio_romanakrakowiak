@@ -24,3 +24,8 @@
   * przy edytowniu klienta pojawiają sie nowe funkcje strony: raport meczowy oraz opcja dodania meczu.
  * Błędy:
    * przy edytowaniu lub dodaniu gracza przycisk "clear" - nie działa.
+
+
+# TASK 2
+### SUBTASK 3 - For what do we write test cases?
+>_A Test Case contains test steps, test data, precondition, postcondition developed for specific test scenario to verify any requirement. These test cases are used by software testers to check if the application works as expected and to identify any bugs or defects that need to be fixed. Writing test cases is an important part of the software development process and is essential for ensuring high-quality software products._
