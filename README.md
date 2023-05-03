@@ -27,5 +27,6 @@
 
 
 # TASK 2
+### SUBTASK 1 and 2: [google drive ](https://drive.google.com/drive/folders/1IV53XuGjcY3kJONxKjmzOV2eoz31Q6CY?usp=share_link)
 ### SUBTASK 3 - For what do we write test cases?
 >_A Test Case contains test steps, test data, precondition, postcondition developed for specific test scenario to verify any requirement. These test cases are used by software testers to check if the application works as expected and to identify any bugs or defects that need to be fixed. Writing test cases is an important part of the software development process and is essential for ensuring high-quality software products._
