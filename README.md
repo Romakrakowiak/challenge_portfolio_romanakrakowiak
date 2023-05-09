@@ -20,6 +20,7 @@
   * brak logo oraz opisu strony (do czego służy)
   * opcja "dodaj gracza" jest mało wyraźna
   * brak przycisku "edytuj" (dane gracza). Trzeba domyślić jak zedytować 
+  * 
   * brak przycisku "anuluj" przy edytowaniu lub dodaniu gracza.
   * przy edytowniu klienta pojawiają sie nowe funkcje strony: raport meczowy oraz opcja dodania meczu.
  * Błędy:
@@ -30,3 +31,7 @@
 ### SUBTASK 1 and 2: [google drive ](https://drive.google.com/drive/folders/1IV53XuGjcY3kJONxKjmzOV2eoz31Q6CY?usp=share_link)
 ### SUBTASK 3 - For what do we write test cases?
 >_A Test Case contains test steps, test data, precondition, postcondition developed for specific test scenario to verify any requirement. These test cases are used by software testers to check if the application works as expected and to identify any bugs or defects that need to be fixed. Writing test cases is an important part of the software development process and is essential for ensuring high-quality software products._
+# TASK 3
+### SUBTASK 1 and 2: [Google drive](https://docs.google.com/spreadsheets/d/1SETxbfKJBHUZmMRifgrrXUF_OBaIBsBoTS6uFuHjNiI/edit?usp=share_link)
+### SUBTASK 3 [TEST REPORT](https://docs.google.com/document/d/1QyetxdFaz0JCLjLLoWMStUinxhV30SAoRlW6ysbDxCU/edit?usp=share_link)
+
