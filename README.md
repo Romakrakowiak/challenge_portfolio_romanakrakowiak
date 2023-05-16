@@ -34,4 +34,10 @@
 # TASK 3
 ### SUBTASK 1 and 2: [Google drive](https://docs.google.com/spreadsheets/d/1SETxbfKJBHUZmMRifgrrXUF_OBaIBsBoTS6uFuHjNiI/edit?usp=share_link)
 ### SUBTASK 3 [TEST REPORT](https://docs.google.com/document/d/1QyetxdFaz0JCLjLLoWMStUinxhV30SAoRlW6ysbDxCU/edit?usp=share_link)
-
+# TASK 4
+### SUBTASK 1 and 2: [google drive](https://drive.google.com/drive/folders/1cn22pj7qkaiPsa3pbHg_Z4HHFspJruq-?usp=share_link)
+### SUBTASK 3
+>_This application helps people to sell things they don't need anymore or to buy things they need. People can literally sell and buy everything there._
+>_The end user should probaly be a person that want in an easy and fast way sell or buy things, usually without going out from home._
+>_The appliacation is a user friendly and seems to be easy to understand. In a visible places you can find sections buy/sell (deppends on what user needs), sections you need such as real estate, cars, job, pets, etc._ 
+>_Nothing would change on this stage._ 
