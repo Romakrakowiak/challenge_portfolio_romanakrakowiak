@@ -45,48 +45,66 @@
 
 # TASK 5
 ### SUBTASK 1
->_Zapytania ktorych sie w tym zadaniu nauczylam to: SELECT, INSERT, UPDATE, DELETE.
+>_Zapytania ktorych sie w tym zadaniu nauczylam to: SELECT, INSERT, UPDATE, DELETE._
 
 ### SUBTASK 2 and 3
- 1. Wyświetl tabelę actors w kolejności alfabetycznej sortując po kolumnie surname. 
+ **1.Wyświetl tabelę actors w kolejności alfabetycznej sortując po kolumnie surname.**
+ 
  SELECT * FROM `actors` ORDER BY surname ASC
+ 
  <img width="192" alt="2023-05-23_23h02_30" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/201b26fb-d576-4814-8252-028a85c88c8e">
 
- 2.Wyświetl film, który powstał w 2019 roku.
+ **2.Wyświetl film, który powstał w 2019 roku.**
  
  SELECT * FROM `movies` WHERE `year_of_production`=2019
  
 <img width="259" alt="2023-05-23_23h09_35" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/58078ac6-e47b-4726-b020-d953394432f6">
 
-3. Wyświetl wszystkie filmy, które powstały między 1900, a 1999 rokiem.
+**3.Wyświetl wszystkie filmy, które powstały między 1900, a 1999 rokiem.**
+
 SELECT * FROM `movies` WHERE `year_of_production` BETWEEN 1900 AND 1999
+
 <img width="381" alt="2023-05-23_23h13_39" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/1d6631b1-1792-45f5-83a4-73cad35a7f3d">
 
-4. Wyświetl JEDYNIE tytuł i cenę filmów, które kosztują poniżej 7$
-SELECT `title`,`price` FROM `movies` WHERE `price`<7;
+**4.Wyświetl JEDYNIE tytuł i cenę filmów, które kosztują poniżej 7$**
+
+SELECT `title`,`price` FROM `movies` WHERE `price`<7
+
 <img width="215" alt="2023-05-23_23h21_02" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/5341638d-fe46-46a5-9ace-7153ad158b7c">
 
-5. Użyj operatora logicznego AND, aby wyświetlić aktorów o actor_id pomiędzy 4-7 (4 i 7 powinny się wyświetlać). NIE UŻYWAJ operatora BETWEEN.
-SELECT * FROM `actors` WHERE `actor_id`>=4 AND `actor_id`<=7;
+**5.Użyj operatora logicznego AND, aby wyświetlić aktorów o actor_id pomiędzy 4-7 (4 i 7 powinny się wyświetlać). NIE UŻYWAJ operatora BETWEEN.**
+
+SELECT * FROM `actors` WHERE `actor_id`>=4 AND `actor_id`<=7
+
 <img width="174" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/8b4c15ca-57ad-4b13-b502-3a5864303302">
 
-6. Wyświetl klientów o id 2,4,6 wykorzystaj do tego warunek logiczny.
+**6.Wyświetl klientów o id 2,4,6 wykorzystaj do tego warunek logiczny.**
+
 SELECT * FROM `customers` WHERE `customer_id`=2 OR `customer_id`=4 OR `customer_id`=6
+
 <img width="263" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/df7faa68-9b92-4af3-9042-bbeabc298d7e">
 
-7. Wyświetl klientów o id 1,3,5 wykorzystaj do tego operator IN.
+**7.Wyświetl klientów o id 1,3,5 wykorzystaj do tego operator IN.**
+
 SELECT * FROM `customers` WHERE `customer_id` IN (1,3,5)
+
 <img width="252" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/68530d5d-7c82-4732-a9bb-1b580a6c4846">
 
-8. Wyświetl dane wszystkich osób z tabeli ‘actors’, których imię zaczyna się od ciągu “An”.
+**8.Wyświetl dane wszystkich osób z tabeli ‘actors’, których imię zaczyna się od ciągu “An”.**
+
 SELECT * FROM `actors` WHERE `name` LIKE "An%";
+
 <img width="166" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/3d658638-cac4-480e-b958-13ed31bbf2da">
 
-9. Wyświetl dane klienta, który nie ma podanego adresu email.
-SELECT * FROM `customers` WHERE `email` IS NULL
+**9.Wyświetl dane klienta, który nie ma podanego adresu email.**
+
+SELECT * FROM `customers` WHERE `email` IS null
+
 <img width="216" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/d0a60cce-0f14-4a71-b81f-ed60a8dfd0e1">
 
-10. Wyświetl wszystkie filmy, których cena wynosi powyżej 9$ oraz ich ID mieści się pomiędzy 2 i 8 movie_id.
-SELECT * FROM `movies` WHERE `price`>9 AND `movie_id` BETWEEN 2 AND 8;
+**10.Wyświetl wszystkie filmy, których cena wynosi powyżej 9$ oraz ich ID mieści się pomiędzy 2 i 8 movie_id.**
+
+SELECT * FROM `movies` WHERE `price`>9 AND `movie_id` BETWEEN 2 AND 8
+
 <img width="272" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/91337ec1-c545-4d67-b094-02c4db81760b">
 
