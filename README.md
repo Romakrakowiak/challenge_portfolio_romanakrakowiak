@@ -41,3 +41,11 @@
 >_The end user should probaly be a person that want in an easy and fast way sell or buy things, usually without going out from home._
 >_The appliacation is a user friendly and seems to be easy to understand. In a visible places you can find sections buy/sell (deppends on what user needs), sections you need such as real estate, cars, job, pets, etc._ 
 >_Nothing would change on this stage._ 
+
+
+# TASK 5
+### SUBTASK 1
+>_Zapytania ktorych sie w tym zadaniu nauczylam to: SELECT, INSERT, UPDATE, DELETE.
+
+### SUBTASK 2
+ 
