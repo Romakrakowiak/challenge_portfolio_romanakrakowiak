@@ -48,12 +48,14 @@
 >_Zapytania ktorych sie w tym zadaniu nauczylam to: SELECT, INSERT, UPDATE, DELETE.
 
 ### SUBTASK 2 and 3
- 1. Wyświetl tabelę actors w kolejności alfabetycznej sortując po kolumnie surname.
+ 1. Wyświetl tabelę actors w kolejności alfabetycznej sortując po kolumnie surname. 
  SELECT * FROM `actors` ORDER BY surname ASC
  <img width="192" alt="2023-05-23_23h02_30" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/201b26fb-d576-4814-8252-028a85c88c8e">
 
  2.Wyświetl film, który powstał w 2019 roku.
-SELECT * FROM `movies` WHERE `year_of_production`=2019;
+ 
+ SELECT * FROM `movies` WHERE `year_of_production`=2019
+ 
 <img width="259" alt="2023-05-23_23h09_35" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/58078ac6-e47b-4726-b020-d953394432f6">
 
 3. Wyświetl wszystkie filmy, które powstały między 1900, a 1999 rokiem.
