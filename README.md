@@ -108,3 +108,21 @@ SELECT * FROM `movies` WHERE `price`>9 AND `movie_id` BETWEEN 2 AND 8
 
 <img width="272" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/91337ec1-c545-4d67-b094-02c4db81760b">
 
+11. Popełniłam błąd wpisując nazwisko Ani Miler – wpisałam Muler. Znajdź i zastosuj funkcję, która poprawi mój karkołomny błąd 🙈
+
+UPDATE `customers` SET `surname`='Miler' WHERE `surname`='Muler'
+
+<img width="261" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/85283068-0605-459d-b95d-0da229d48fe0">
+
+12. Pobrałam za dużo pieniędzy od klienta, który kupił w ostatnim czasie film o id 4. Korzystając z funkcji join sprawdź, jak ma na imię klient i jakiego ma maila. W celu napisania mu wiadomości o pomyłce fantastycznej szefowej.
+
+SELECT customers.name, customers.email FROM customers INNER JOIN sale ON customers.customer_id = sale.customer_id WHERE sale.movie_id=4
+
+<img width="122" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/0c8a16a8-b26e-4230-ac44-710688a53f97">
+
+13. Na pewno zauważył_ś, że sprzedawca zapomniał wpisać emaila klientce Patrycji. Uzupełnij ten brak wpisując: pati@mail.com
+
+UPDATE `customers` SET `email`='pati@mail.com' WHERE `name`='Patrycja'
+
+<img width="264" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/0ebb47a6-1a08-45c3-a9a4-b05bea7dc9a7">
+
