@@ -134,6 +134,35 @@ SELECT customers.name, customers.surname, movies.title FROM ((customers INNER JO
 
 15. W celu anonimizacji danych, chcesz stworzyć pseudonimy swoich klientów. - Dodaj kolumnę o nazwie ‘pseudonym’ do tabeli customer,- Wypełnij kolumnę w taki sposób, aby pseudonim stworzył się z dwóch pierwszych liter imienia i ostatniej litery nazwiska. Np. Natalie Pilling → Nag
 
-Dodanie kolumny: ALTER TABLE `customers` ADD `pseudonym` INT NOT NULL ;
-Wypełnienie:
+Dodanie kolumny: ALTER TABLE `customers` ADD `pseudonym` VARCHAR(3) NULL DEFAULT NULL ;
+Wypełnienie: UPDATE `customers` SET `pseudonym`= CONCAT(LEFT(`name`,2), RIGHT(`surname`,1))
+<img width="328" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/f1a13561-e1be-4d67-85c7-ffe2165575fb">
+
+16. Wyświetl tytuły filmów, które zostały zakupione, wyświetl tabelę w taki sposób, aby tytuły się nie powtarzały.
+
+SELECT DISTINCT title FROM movies INNER JOIN sale ON movies.movie_id = sale.movie_id
+
+<img width="180" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/a23df558-18b7-4831-ad85-52e940a23112">
+
+17. Wyświetl wspólną listę imion wszystkich aktorów i klientów, a wynik uporządkuj alfabetycznie. (Wykorzystaj do tego funkcji UNION)
+
+SELECT name FROM customers
+UNION
+SELECT name FROM actors
+ORDER BY name ASC;
+<img width="73" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/74f27968-a7d9-416f-9040-cf54fb08b797">
+
+18. Polskę opanowała inflacja i nasz sklepik z filmami również dotknął ten problem. Podnieś cenę wszystkich filmów wyprodukowanych po 2000 roku o 2,5 $ (Pamiętaj, że dolar to domyślna jednostka- nie używaj jej nigdzie).
+UPDATE movies SET price = price + 2.5;
+
+19. Wyświetl imię i nazwisko aktora o id 4 i tytuł filmu, w którym zagrał
+
+SELECT actors.name, actors.surname, movies.title FROM ((cast INNER JOIN movies ON movies.movie_id = cast.movie_id) INNER JOIN actors ON actors.actor_id = cast.actor_id) WHERE actors.actor_id = 4;
+
+<img width="160" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/ff7c8b55-0f5b-4e53-abb7-709ab7729635">
+
+20. A gdzie nasza HONIA!? Dodaj do tabeli customers nową krotkę, gdzie customer_id = 7, name = Honia, surname = Stuczka-Kucharska, email = honia@mail.com oraz pseudonym = Hoa
+
+INSERT INTO `customers`(`customer_id`, `name`, `surname`, `email`, `pseudonym`) VALUES ('7','Honia','Stuczka-Kucharska','honia@mail.com','Hoa');
+<img width="372" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/d5748c21-bae8-492d-b7c5-e9a5adae5f02">
 
