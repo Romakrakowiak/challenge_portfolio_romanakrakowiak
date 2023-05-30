@@ -126,3 +126,14 @@ UPDATE `customers` SET `email`='pati@mail.com' WHERE `name`='Patrycja'
 
 <img width="264" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/0ebb47a6-1a08-45c3-a9a4-b05bea7dc9a7">
 
+14. Dla każdego zakupu wyświetl, imię i nazwisko klienta, który dokonał wypożyczenia oraz tytuł wypożyczonego filmu. (wykorzystaj do tego funkcję inner join, zastanów się wcześniej, które tabele Ci się przydadzą do wykonania ćwiczenia).
+
+SELECT customers.name, customers.surname, movies.title FROM ((customers INNER JOIN sale ON customers.customer_id = sale.customer_id) INNER JOIN movies ON movies.movie_id = sale.movie_id);
+
+<img width="283" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/74beaa42-ff3f-4d64-a268-9441046c82bd">
+
+15. W celu anonimizacji danych, chcesz stworzyć pseudonimy swoich klientów. - Dodaj kolumnę o nazwie ‘pseudonym’ do tabeli customer,- Wypełnij kolumnę w taki sposób, aby pseudonim stworzył się z dwóch pierwszych liter imienia i ostatniej litery nazwiska. Np. Natalie Pilling → Nag
+
+Dodanie kolumny: ALTER TABLE `customers` ADD `pseudonym` INT NOT NULL ;
+Wypełnienie:
+
