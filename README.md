@@ -108,61 +108,73 @@ SELECT * FROM `movies` WHERE `price`>9 AND `movie_id` BETWEEN 2 AND 8
 
 <img width="272" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/91337ec1-c545-4d67-b094-02c4db81760b">
 
-11. Popełniłam błąd wpisując nazwisko Ani Miler – wpisałam Muler. Znajdź i zastosuj funkcję, która poprawi mój karkołomny błąd 🙈
+
+# TASK 6
+### SUBTASK 2
+>_14 punktow :)
+
+### SUBTASK 1
+
+**11.Popełniłam błąd wpisując nazwisko Ani Miler – wpisałam Muler. Znajdź i zastosuj funkcję, która poprawi mój karkołomny błąd 🙈**
 
 UPDATE `customers` SET `surname`='Miler' WHERE `surname`='Muler'
 
 <img width="261" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/85283068-0605-459d-b95d-0da229d48fe0">
 
-12. Pobrałam za dużo pieniędzy od klienta, który kupił w ostatnim czasie film o id 4. Korzystając z funkcji join sprawdź, jak ma na imię klient i jakiego ma maila. W celu napisania mu wiadomości o pomyłce fantastycznej szefowej.
+**12.Pobrałam za dużo pieniędzy od klienta, który kupił w ostatnim czasie film o id 4. Korzystając z funkcji join sprawdź, jak ma na imię klient i jakiego ma maila. W celu napisania mu wiadomości o pomyłce fantastycznej szefowej.**
 
 SELECT customers.name, customers.email FROM customers INNER JOIN sale ON customers.customer_id = sale.customer_id WHERE sale.movie_id=4
 
 <img width="122" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/0c8a16a8-b26e-4230-ac44-710688a53f97">
 
-13. Na pewno zauważył_ś, że sprzedawca zapomniał wpisać emaila klientce Patrycji. Uzupełnij ten brak wpisując: pati@mail.com
+**13.Na pewno zauważył_ś, że sprzedawca zapomniał wpisać emaila klientce Patrycji. Uzupełnij ten brak wpisując: pati@mail.com**
 
 UPDATE `customers` SET `email`='pati@mail.com' WHERE `name`='Patrycja'
 
 <img width="264" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/0ebb47a6-1a08-45c3-a9a4-b05bea7dc9a7">
 
-14. Dla każdego zakupu wyświetl, imię i nazwisko klienta, który dokonał wypożyczenia oraz tytuł wypożyczonego filmu. (wykorzystaj do tego funkcję inner join, zastanów się wcześniej, które tabele Ci się przydadzą do wykonania ćwiczenia).
+**14.Dla każdego zakupu wyświetl, imię i nazwisko klienta, który dokonał wypożyczenia oraz tytuł wypożyczonego filmu. (wykorzystaj do tego funkcję inner join, zastanów się wcześniej, które tabele Ci się przydadzą do wykonania ćwiczenia).**
 
 SELECT customers.name, customers.surname, movies.title FROM ((customers INNER JOIN sale ON customers.customer_id = sale.customer_id) INNER JOIN movies ON movies.movie_id = sale.movie_id);
 
 <img width="283" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/74beaa42-ff3f-4d64-a268-9441046c82bd">
 
-15. W celu anonimizacji danych, chcesz stworzyć pseudonimy swoich klientów. - Dodaj kolumnę o nazwie ‘pseudonym’ do tabeli customer,- Wypełnij kolumnę w taki sposób, aby pseudonim stworzył się z dwóch pierwszych liter imienia i ostatniej litery nazwiska. Np. Natalie Pilling → Nag
+**15.W celu anonimizacji danych, chcesz stworzyć pseudonimy swoich klientów. - Dodaj kolumnę o nazwie ‘pseudonym’ do tabeli customer,- Wypełnij kolumnę w taki sposób, aby pseudonim stworzył się z dwóch pierwszych liter imienia i ostatniej litery nazwiska. Np. Natalie Pilling → Nag**
 
 Dodanie kolumny: ALTER TABLE `customers` ADD `pseudonym` VARCHAR(3) NULL DEFAULT NULL ;
+
 Wypełnienie: UPDATE `customers` SET `pseudonym`= CONCAT(LEFT(`name`,2), RIGHT(`surname`,1))
+
 <img width="328" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/f1a13561-e1be-4d67-85c7-ffe2165575fb">
 
-16. Wyświetl tytuły filmów, które zostały zakupione, wyświetl tabelę w taki sposób, aby tytuły się nie powtarzały.
+**16.Wyświetl tytuły filmów, które zostały zakupione, wyświetl tabelę w taki sposób, aby tytuły się nie powtarzały.**
 
 SELECT DISTINCT title FROM movies INNER JOIN sale ON movies.movie_id = sale.movie_id
 
 <img width="180" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/a23df558-18b7-4831-ad85-52e940a23112">
 
-17. Wyświetl wspólną listę imion wszystkich aktorów i klientów, a wynik uporządkuj alfabetycznie. (Wykorzystaj do tego funkcji UNION)
+**17.Wyświetl wspólną listę imion wszystkich aktorów i klientów, a wynik uporządkuj alfabetycznie. (Wykorzystaj do tego funkcji UNION)**
 
 SELECT name FROM customers
 UNION
 SELECT name FROM actors
 ORDER BY name ASC;
+
 <img width="73" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/74f27968-a7d9-416f-9040-cf54fb08b797">
 
-18. Polskę opanowała inflacja i nasz sklepik z filmami również dotknął ten problem. Podnieś cenę wszystkich filmów wyprodukowanych po 2000 roku o 2,5 $ (Pamiętaj, że dolar to domyślna jednostka- nie używaj jej nigdzie).
+**18.Polskę opanowała inflacja i nasz sklepik z filmami również dotknął ten problem. Podnieś cenę wszystkich filmów wyprodukowanych po 2000 roku o 2,5 $ (Pamiętaj, że dolar to domyślna jednostka- nie używaj jej nigdzie).
+
 UPDATE movies SET price = price + 2.5;
 
-19. Wyświetl imię i nazwisko aktora o id 4 i tytuł filmu, w którym zagrał
+**19.Wyświetl imię i nazwisko aktora o id 4 i tytuł filmu, w którym zagrał**
 
 SELECT actors.name, actors.surname, movies.title FROM ((cast INNER JOIN movies ON movies.movie_id = cast.movie_id) INNER JOIN actors ON actors.actor_id = cast.actor_id) WHERE actors.actor_id = 4;
 
 <img width="160" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/ff7c8b55-0f5b-4e53-abb7-709ab7729635">
 
-20. A gdzie nasza HONIA!? Dodaj do tabeli customers nową krotkę, gdzie customer_id = 7, name = Honia, surname = Stuczka-Kucharska, email = honia@mail.com oraz pseudonym = Hoa
+**20.A gdzie nasza HONIA!? Dodaj do tabeli customers nową krotkę, gdzie customer_id = 7, name = Honia, surname = Stuczka-Kucharska, email = honia@mail.com oraz pseudonym = Hoa**
 
 INSERT INTO `customers`(`customer_id`, `name`, `surname`, `email`, `pseudonym`) VALUES ('7','Honia','Stuczka-Kucharska','honia@mail.com','Hoa');
+
 <img width="372" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/d5748c21-bae8-492d-b7c5-e9a5adae5f02">
 
