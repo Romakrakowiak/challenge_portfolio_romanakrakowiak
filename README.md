@@ -178,3 +178,5 @@ INSERT INTO `customers`(`customer_id`, `name`, `surname`, `email`, `pseudonym`) 
 
 ### SUBTASK 2
 >_14 punktow :)
+
+### SUBTASK 3
