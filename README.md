@@ -179,4 +179,4 @@ INSERT INTO `customers`(`customer_id`, `name`, `surname`, `email`, `pseudonym`) 
 ### SUBTASK 2
 >_14 punktow :)
 
-### SUBTASK 3
+### [SUBTASK 3](https://github.com/Romakrakowiak/RomanaKrakowiak-PORTFOLIO#romanakrakowiak-portfolio)
