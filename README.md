@@ -110,8 +110,6 @@ SELECT * FROM `movies` WHERE `price`>9 AND `movie_id` BETWEEN 2 AND 8
 
 
 # TASK 6
-### SUBTASK 2
->_14 punktow :)
 
 ### SUBTASK 1
 
@@ -162,7 +160,7 @@ ORDER BY name ASC;
 
 <img width="73" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/74f27968-a7d9-416f-9040-cf54fb08b797">
 
-**18.Polskę opanowała inflacja i nasz sklepik z filmami również dotknął ten problem. Podnieś cenę wszystkich filmów wyprodukowanych po 2000 roku o 2,5 $ (Pamiętaj, że dolar to domyślna jednostka- nie używaj jej nigdzie).
+**18.Polskę opanowała inflacja i nasz sklepik z filmami również dotknął ten problem. Podnieś cenę wszystkich filmów wyprodukowanych po 2000 roku o 2,5 $ (Pamiętaj, że dolar to domyślna jednostka- nie używaj jej nigdzie).**
 
 UPDATE movies SET price = price + 2.5;
 
@@ -178,3 +176,5 @@ INSERT INTO `customers`(`customer_id`, `name`, `surname`, `email`, `pseudonym`) 
 
 <img width="372" alt="image" src="https://github.com/Romakrakowiak/challenge_portfolio_romanakrakowiak/assets/131308406/d5748c21-bae8-492d-b7c5-e9a5adae5f02">
 
+### SUBTASK 2
+>_14 punktow :)
